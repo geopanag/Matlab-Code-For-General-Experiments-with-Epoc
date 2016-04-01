@@ -35,7 +35,7 @@ function [Header EegMatrix Events Timepoint nS]= Experiment(ExperimentTime, Tria
     readytocollect = false;
 
 
-    Header=strcat(strjoin(Channels(TrainedChannels),','),',Label');
+    Header=strcat(strjoin(Channels(TrainedChannels+1),','),',Label');
     %%
 
     Events=zeros(ExperimentTime*SampFreq,1);
@@ -82,7 +82,7 @@ function [Header EegMatrix Events Timepoint nS]= Experiment(ExperimentTime, Tria
                     data = libpointer('doublePtr',zeros(1,nSamplesTaken));
                         %take the specified channels used for training
                         for (i = TrainedChannels)
-                            calllib('edk','EE_DataGet',hData, Channels_enum.(char(Channels(i))), data, uint32(nSamplesTaken));
+                            calllib('edk','EE_DataGet',hData, i, data, uint32(nSamplesTaken));
                             DataValue = get(data,'value'); 
                             %store the data in EegMatrix
                             EegMatrix(Timepoint+1:Timepoint+length(DataValue),i) = DataValue;                    

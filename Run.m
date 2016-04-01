@@ -2,7 +2,7 @@
 SeriesTime=30; %Total duration of the Series of trials
 TrialTime = 5;%Duration of each Trial
 DatasetName='data'; %File to Store the Outcome
-TrainedChannels=4:17;   %The channels used for training
+TrainedChannels=3:16;   %The channels used for training
 SampFreq=128; %Epoc sampling 
 Rectime = 1;  %buffer data size (in sec)
 
