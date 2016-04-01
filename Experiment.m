@@ -3,8 +3,6 @@ function [Header EegMatrix Events Timepoint nS]= Experiment(ExperimentTime, Tria
     EegMatrix = zeros(ExperimentTime*SampFreq,length(TrainedChannels));
     nS = zeros(ExperimentTime*SampFreq,1); %the number of samples acquired 
     
-    %DataChannels = enuminfo.EE_DataChannels_enum;
-    Channels_enum=struct('ED_COUNTER',0,'ED_INTERPOLATED',1,'ED_RAW_CQ',2,'ED_AF3',3,'ED_F7',4,'ED_F3',5,'ED_FC5',6,'ED_T7',7,'ED_P7',8,'ED_O1',9,'ED_O2',10,'ED_P8',11,'ED_T8',12,'ED_FC6',13,'ED_F4',14,'ED_F8',15,'ED_AF4',16,'ED_GYROX',17,'ED_GYROY',18,'ED_TIMESTAMP',19,'ED_ES_TIMESTAMP',20,'ED_FUNC_ID',21,'ED_FUNC_VALUE',22,'ED_MARKER',23,'ED_SYNC_SIGNAL',24);
     Channels = {'ED_COUNTER','ED_INTERPOLATED','ED_RAW_CQ','ED_AF3','ED_F7','ED_F3','ED_FC5','ED_T7','ED_P7','ED_O1','ED_O2','ED_P8','ED_T8','ED_FC6','ED_F4','ED_F8','ED_AF4','ED_GYROX','ED_GYROY','ED_TIMESTAMP','ED_ES_TIMESTAMP','ED_FUNC_ID','ED_FUNC_VALUE','ED_MARKER','ED_SYNC_SIGNAL'};
     lib_flag_popup = 1;
 
@@ -36,8 +34,7 @@ function [Header EegMatrix Events Timepoint nS]= Experiment(ExperimentTime, Tria
 
 
     Header=strcat(strjoin(Channels(TrainedChannels+1),','),',Label');
-    %%
-
+  
     Events=zeros(ExperimentTime*SampFreq,1);
     Index=1;
     
