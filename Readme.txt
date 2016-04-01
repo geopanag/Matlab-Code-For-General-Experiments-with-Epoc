@@ -1,5 +1,5 @@
 Code to run basic experiments based on visual stimuli with emotiv epoc using matlab.
-The files produced include the channel and the event timeseries in synchrony, to make up for epoc's variable sampling rate.
+The files produced include the channel and the event timeseries in synchrony, to make up for epoc's occasional variable sampling rate.
 The variables of the experiment are defined in Run.m and include:
 SeriesTime
 TrialTime 
