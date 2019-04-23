@@ -9,5 +9,4 @@ SampFreq
 Rectime
 
 The stimuli is by default a message for the subject to move Right or Left Arm.
-It can be changed to any visual or auditory stimuli, an example given in comments
-where left and right are substituted with a black and white image.
+It can be changed to any visual or auditory stimuli, an example given in comments where left and right are substituted with a black and white image.
